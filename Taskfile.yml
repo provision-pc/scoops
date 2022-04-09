@@ -131,6 +131,9 @@ includes:
   install:software:
     taskfile: ./.config/taskfiles/install/Taskfile-software.yml
     optional: true
+  install:tap:
+    taskfile: ./.config/taskfiles/install/Taskfile-tap.yml
+    optional: true
   lint:
     taskfile: ./.config/taskfiles/lint/Taskfile.yml
     optional: true
