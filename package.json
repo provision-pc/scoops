@@ -1,24 +1,28 @@
 {
   "private": false,
-  "name": "go-bodega",
+  "name": "@mblabs/homebrew-tap",
   "version": "11.0.0",
-  "description": "A gorgeous, feature-packed drop-in replacement for the go-task project",
+  "description": "The official Homebrew tap for Install Doctor (https://install.doctor)",
   "license": "MIT",
   "author": "Brian Zalewski <brian@megabyte.space> (https://megabyte.space)",
   "homepage": "https://megabyte.space",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/megabyte-labs/Bodega.git"
+    "url": "git+https://github.com/installdoc/homebrew-tap.git"
   },
   "bugs": {
     "email": "help@megabyte.space",
-    "url": "https://gitlab.com/megabyte-labs/go/cli/bodega/-/issues"
+    "url": "https://gitlab.com/megabyte-labs/cloud/homebrew-tap/-/issues"
   },
-  "type": "module",
-  "files": [],
+  "type": "commonjs",
+  "main": "dist/main.js",
+  "files": [
+    "dist",
+    "lib"
+  ],
   "scripts": {
-    "build": "bash start.sh && task go:build",
-    "bump": "npm run build && npm version patch --no-commit-hooks --no-git-tag-version --force && npm publish",
+    "build": "bash start.sh && task npm:build:tsconfig",
+    "bump": "npm run build && npm version patch --no-scripts --no-commit-hooks --no-git-tag-version --force && SKIP_PREPUB=true npm publish",
     "commit": "bash start.sh && task commit",
     "fix": "bash start.sh && task fix",
     "help": "bash start.sh && task --menu",
@@ -29,7 +33,7 @@
     "release": "bash start.sh && task publish:semantic-release",
     "repair": "bash <(curl -sS https://install.doctor/repair)",
     "start": "test -z $SKIP_NPM_START && bash start.sh || true",
-    "test": "bash start.sh && task go:test",
+    "test": "bash start.sh && task npm:test:none",
     "preuninstall": "go-npm uninstall || true",
     "unpack": "bash start.sh && task npm:bundle:unpack",
     "update": "bash start.sh && task update",
@@ -40,31 +44,45 @@
       "path": "node_modules/git-cz-emoji"
     }
   },
-  "dependencies": {},
+  "typings": "dist/main.d.ts",
+  "dependencies": {
+    "tslib": "latest"
+  },
+  "optionalDependencies": {},
   "devDependencies": {
+    "@commitlint/config-conventional": "latest",
+    "@types/node": "^16.11.6",
+    "esbuild": "^0.12.29",
+    "esbuild-node-externals": "^1.3.0",
     "eslint-config-strict-mode": "latest",
     "git-cz-emoji": "latest",
+    "handlebars-helpers": "latest",
+    "jest-preset-ts": "latest",
     "prettier-config-sexy-mode": "latest",
     "semantic-release-config": "latest",
-    "typescript": "^4.5.5",
-    "@commitlint/config-conventional": "latest",
-    "handlebars-helpers": "latest"
+    "typescript": "^4.5.5"
   },
   "keywords": [
     "automation",
     "cli",
+    "doctor",
     "go",
     "go-lang",
     "golang",
+    "homebrew",
+    "install",
+    "installdoctor",
     "mblabs",
     "megabytelabs",
-    "professormanhattan"
+    "professormanhattan",
+    "tap",
+    "washingtondc"
   ],
   "engines": {
     "node": ">=14.18.0"
   },
   "publishConfig": {
-    "@gitlab:registry": "https://gitlab.com/api/v4/projects/28755315/packages/npm/",
+    "@gitlab:registry": "https://gitlab.com/api/v4/projects//packages/npm/",
     "access": "public",
     "registry": "https://registry.npmjs.org/",
     "tag": "edge"
@@ -93,7 +111,9 @@
     "showAuthor": true
   },
   "commitlint": {
-    "extends": [],
+    "extends": [
+      "@commitlint/config-conventional"
+    ],
     "helpUrl": "https://megabyte.space/docs/contributing/commits"
   },
   "eslintConfig": {
@@ -116,6 +136,22 @@
     "name": "task",
     "path": "./bin",
     "url": "https://github.com/megabyte-labs/Bodega/releases/download/v10.0.0/Bodega-10.0.0-{{platform}}-{{arch}}.tar.gz"
+  },
+  "jest": {
+    "preset": "jest-preset-ts",
+    "reporters": [
+      "default",
+      [
+        "jest-html-reporters",
+        {
+          "filename": "index.html",
+          "logoImgPath": "./.config/assets/logo-jest-report.png",
+          "openReport": true,
+          "pageTitle": "Code Coverage Report",
+          "publicPath": "./coverage"
+        }
+      ]
+    ]
   },
   "jscpd": {
     "gitignore": true,
@@ -186,6 +222,17 @@
     "logo.png": [
       "task image:resize -- 200 200",
       "task image:compress --"
+    ]
+  },
+  "nodemonConfig": {
+    "exec": "tsc -p . && node --inspect-brk dist/main",
+    "ext": "js,jsx,json,ts,tsx,yml",
+    "ignore": [
+      "src/**/*.spec.ts"
+    ],
+    "watch": [
+      ".env",
+      "src"
     ]
   },
   "ntl": {
