@@ -89,6 +89,7 @@
   },
   "blueprint": {
     "description": "The official Homebrew tap for Install Doctor (https://install.doctor)",
+    "github_id": "R_kgDOGuHyMw",
     "group": "npm",
     "name": "Install Doctor",
     "overview": "**[Install Doctor](https://install.doctor)** is a web service that makes it easy to install your favorite software. It is a service maintained by [Megabyte Labs](https://megabyte.space) and is used as a front-end for anything that involves installing and provisioning systems. This repository is just one small part of Install Doctor.",
