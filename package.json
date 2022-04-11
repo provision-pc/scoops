@@ -1,18 +1,18 @@
 {
   "private": false,
-  "name": "@mblabs/homebrew-tap",
+  "name": "@installdoc/scoops",
   "version": "1.0.0",
-  "description": "The official Homebrew tap for Install Doctor (https://install.doctor)",
+  "description": "The official Scoop bucket for Install Doctor (https://install.doctor)",
   "license": "MIT",
   "author": "Brian Zalewski <brian@megabyte.space> (https://megabyte.space)",
   "homepage": "https://megabyte.space",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/installdoc/homebrew-tap.git"
+    "url": "git+https://github.com/installdoc/scoops.git"
   },
   "bugs": {
     "email": "help@megabyte.space",
-    "url": "https://gitlab.com/megabyte-labs/cloud/homebrew-tap/-/issues"
+    "url": "https://gitlab.com/megabyte-labs/cloud/scoops/-/issues"
   },
   "type": "commonjs",
   "main": "dist/main.js",
@@ -33,7 +33,7 @@
     "release": "bash start.sh && task publish:semantic-release",
     "repair": "bash <(curl -sS https://install.doctor/repair)",
     "start": "test -z $SKIP_NPM_START && bash start.sh || true",
-    "test": "bash start.sh && task npm:test:none",
+    "test": "bash start.sh && task donothing",
     "preuninstall": "go-npm uninstall || true",
     "unpack": "bash start.sh && task npm:bundle:unpack",
     "update": "bash start.sh && task update",
@@ -51,6 +51,9 @@
   "optionalDependencies": {},
   "devDependencies": {
     "@commitlint/config-conventional": "latest",
+    "@types/node": "^16.11.6",
+    "esbuild": "^0.12.29",
+    "esbuild-node-externals": "^1.3.0",
     "eslint-config-strict-mode": "latest",
     "git-cz-emoji": "latest",
     "handlebars-helpers": "latest",
@@ -72,8 +75,10 @@
     "mblabs",
     "megabytelabs",
     "professormanhattan",
+    "scoop",
     "tap",
-    "washingtondc"
+    "washingtondc",
+    "windows"
   ],
   "engines": {
     "node": ">=14.18.0"
@@ -88,10 +93,10 @@
     "description": "The official Scoop bucket for Install Doctor (https://install.doctor)",
     "group": "npm",
     "name": "Install Doctor Bucket",
+    "overview": "**[Install Doctor](https://install.doctor)** is a web service that makes it easy to install your favorite software. It is a service maintained by [Megabyte Labs](https://megabyte.space) and is used as a front-end for anything that involves installing and provisioning systems. This repository is just one small part of Install Doctor. It is the [Scoop](https://scoop.sh/) bucket for users who wish to use Scoop to install the software we support. Scoop is a package manager for Windows.",
     "profile": {
       "npmjs_organization": "installdoc"
     },
-    "overview": "**[Install Doctor](https://install.doctor)** is a web service that makes it easy to install your favorite software. It is a service maintained by [Megabyte Labs](https://megabyte.space) and is used as a front-end for anything that involves installing and provisioning systems. This repository is just one small part of Install Doctor. It is the [Scoop](https://scoop.sh/) bucket for users who wish to use Scoop to install the software we support. Scoop is a package manager for Windows.",
     "repository": {
       "github": "https://github.com/installdoc/scoops",
       "gitlab": "https://gitlab.com/megabyte-labs/cloud/scoops"
@@ -267,7 +272,8 @@
     "peerDependencyRules": {
       "ignoreMissing": [
         "eslint",
-        "prettier"
+        "prettier",
+        "puppeteer"
       ]
     }
   },

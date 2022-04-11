@@ -1,12 +1,12 @@
-<!-- ⚠️ This README has been generated from the file(s) ".config/docs/blueprint-readme-tap.md" ⚠️--><div align="center">
+<!-- ⚠️ This README has been generated from the file(s) ".config/docs/blueprint-readme-scoop.md" ⚠️--><div align="center">
   <center>
-    <a href="https://github.com/installdoc/homebrew-tap">
-      <img width="148" height="148" alt="Install Doctor Tap logo" src="https://gitlab.com/megabyte-labs/cloud/homebrew-tap/-/raw/master/logo.png" />
+    <a href="https://github.com/installdoc/scoops">
+      <img width="148" height="148" alt="Install Doctor Bucket logo" src="https://gitlab.com/megabyte-labs/cloud/scoops/-/raw/master/logo.png" />
     </a>
   </center>
 </div>
 <div align="center">
-  <center><h1 align="center"><i></i>The Official Homebrew Tap for Install Doctor<i></i></h1></center>
+  <center><h1 align="center"><i></i>The Official Scoop Bucket for Install Doctor<i></i></h1></center>
   <center><h4 style="color: #18c3d1;">Maintained by <a href="https://megabyte.space" target="_blank">Megabyte Labs</a></h4><i></i></center>
 </div>
 
@@ -14,7 +14,7 @@
   <a href="https://megabyte.space" title="Megabyte Labs homepage" target="_blank">
     <img alt="Homepage" src="https://img.shields.io/website?down_color=%23FF4136&down_message=Down&label=Homepage&logo=home-assistant&logoColor=white&up_color=%232ECC40&up_message=Up&url=https%3A%2F%2Fmegabyte.space&style=for-the-badge" />
   </a>
-  <a href="https://github.com/installdoc/homebrew-tap/blob/master/docs/CONTRIBUTING.md" title="Learn about contributing" target="_blank">
+  <a href="https://github.com/installdoc/scoops/blob/master/docs/CONTRIBUTING.md" title="Learn about contributing" target="_blank">
     <img alt="Contributing" src="https://img.shields.io/badge/Contributing-Guide-0074D9?logo=github-sponsors&logoColor=white&style=for-the-badge" />
   </a>
   <a href="https://app.slack.com/client/T01ABCG4NK1/C01NN74H0LW/details/" title="Chat with us on Slack" target="_blank">
@@ -23,27 +23,27 @@
   <a href="https://gitter.im/megabyte-labs/community" title="Chat with the community on Gitter" target="_blank">
     <img alt="Gitter" src="https://img.shields.io/gitter/room/megabyte-labs/community?logo=gitter&logoColor=white&style=for-the-badge" />
   </a>
-  <a href="https://github.com/installdoc/homebrew-tap" title="GitHub mirror" target="_blank">
+  <a href="https://github.com/installdoc/scoops" title="GitHub mirror" target="_blank">
     <img alt="GitHub" src="https://img.shields.io/badge/Mirror-GitHub-333333?logo=github&style=for-the-badge" />
   </a>
-  <a href="https://gitlab.com/megabyte-labs/cloud/homebrew-tap" title="GitLab repository" target="_blank">
+  <a href="https://gitlab.com/megabyte-labs/cloud/scoops" title="GitLab repository" target="_blank">
     <img alt="GitLab" src="https://img.shields.io/badge/Repo-GitLab-fc6d26?logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgAQMAAABJtOi3AAAABlBMVEUAAAD///+l2Z/dAAAAAXRSTlMAQObYZgAAAHJJREFUCNdNxKENwzAQQNEfWU1ZPUF1cxR5lYxQqQMkLEsUdIxCM7PMkMgLGB6wopxkYvAeI0xdHkqXgCLL0Beiqy2CmUIdeYs+WioqVF9C6/RlZvblRNZD8etRuKe843KKkBPw2azX13r+rdvPctEaFi4NVzAN2FhJMQAAAABJRU5ErkJggg==&style=for-the-badge" />
   </a>
 </div>
 <br/>
 <div align="center">
-  <a href="https://gitlab.com/megabyte-labs/cloud/homebrew-tap/-/commits/master" title="GitLab CI build status" target="_blank">
-    <img alt="Build status" src="https://img.shields.io/gitlab/pipeline-status/megabyte-labs/cloud/homebrew-tap?branch=master&label=build&logo=gitlab&logoColor=white&style=flat-square">
+  <a href="https://gitlab.com/megabyte-labs/cloud/scoops/-/commits/master" title="GitLab CI build status" target="_blank">
+    <img alt="Build status" src="https://img.shields.io/gitlab/pipeline-status/megabyte-labs/cloud/scoops?branch=master&label=build&logo=gitlab&logoColor=white&style=flat-square">
   </a>
   <a href="https://install.doctor" target="_blank">
     <img alt="Documentation / Instructions" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg?logo=readthedocs&logoColor=white&style=flat-square" />
   </a>
-  <a href="https://github.com/installdoc/homebrew-tap/blob/master/LICENSE" target="_blank">
+  <a href="https://github.com/installdoc/scoops/blob/master/LICENSE" target="_blank">
     <img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-yellow.svg?logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgAQMAAABJtOi3AAAABlBMVEUAAAD///+l2Z/dAAAAAXRSTlMAQObYZgAAAHpJREFUCNdjYOD/wMDAUP+PgYHxhzwDA/MB5gMM7AwMDxj4GBgKGGQYGCyAEEgbMDDwAAWAwmk8958xpIOI5zKH2RmOyhxmZjguAiKmgIgtQOIYmFgCIp4AlaQ9OczGkJYCJEAGgI0CGwo2HmwR2Eqw5SBnNIAdBHYaAJb6KLM15W/CAAAAAElFTkSuQmCC&style=flat-square" />
   </a>
 </div>
 
-> </br><h4 align="center">**The official Homebrew tap for Install Doctor (https://install.doctor)**</h4></br>
+> </br><h4 align="center">**The official Scoop bucket for Install Doctor (https://install.doctor)**</h4></br>
 
 <a href="#table-of-contents" style="width:100%"><img style="width:100%" src="https://gitlab.com/megabyte-labs/assets/-/raw/master/png/aqua-divider.png" /></a>
 
@@ -52,7 +52,7 @@
 - [Overview](#overview)
 - [Requirements](#requirements)
 - [Example Install](#example-install)
-- [This Repository (Shared Common)](#this-repository-shared-common)
+- [Packages](#packages)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -60,39 +60,41 @@
 
 ## Overview
 
-**[Install Doctor](https://install.doctor)** is a web service that makes it easy to install your favorite software. It is a service maintained by [Megabyte Labs](https://megabyte.space) and is used as a front-end for anything that involves installing and provisioning systems. This repository is just one small part of Install Doctor. It is the Homebrew tap for users who wish to use Homebrew to install the software we support.
+**[Install Doctor](https://install.doctor)** is a web service that makes it easy to install your favorite software. It is a service maintained by [Megabyte Labs](https://megabyte.space) and is used as a front-end for anything that involves installing and provisioning systems. This repository is just one small part of Install Doctor. It is the [Scoop](https://scoop.sh/) bucket for users who wish to use Scoop to install the software we support. Scoop is a package manager for Windows.
 
 <a href="#requirements" style="width:100%"><img style="width:100%" src="https://gitlab.com/megabyte-labs/assets/-/raw/master/png/aqua-divider.png" /></a>
 
 ## Requirements
 
-In order to leverage the software that this Homebrew tap provides, you first need to [install Homebrew on your system](https://brew.sh/). It is available on macOS, Linux, and you can install it on Windows with WSL. After you have Homebrew installed, you must then add our tap to install the software that is housed in this repository. You can install the tap by running:
+In order to leverage the software that this Scoop bucket provides, you first need to [install Scoop on your system](https://github.com/ScoopInstaller/Scoop/wiki/Quick-Start). Scoop is used to install software on Windows. If you are looking for a Linux or macOS installer, then this repository is not for you. After you have Scoop installed, you must then add our Scoop bucket to install the scoops that are housed in this repository / bucket. You can install the Scoop bucket by running:
 
 ```shell
-brew tap installdoc/tap
+scoop bucket add org https://github.com/installdoc/scoops.git
 ```
 
 <a href="#example-install" style="width:100%"><img style="width:100%" src="https://gitlab.com/megabyte-labs/assets/-/raw/master/png/aqua-divider.png" /></a>
 
 ## Example Install
 
-After the tap is installed, you can install software by specifying its short name. For instance, if you wanted to install [Bodega](https://github.com/megabyte-labs/Bodega) then you would run:
+After the Scoop bucket is added, you can install software. For example, if you want to install [Bodega](https://github.com/megabyte-labs/Bodega) then you would run:
 
 ```shell
-brew install bodega
+scoop install installdoc/bodega
 ```
 
-<a href="#this-repository-shared-common" style="width:100%"><img style="width:100%" src="https://gitlab.com/megabyte-labs/assets/-/raw/master/png/aqua-divider.png" /></a>
+<a href="#packages" style="width:100%"><img style="width:100%" src="https://gitlab.com/megabyte-labs/assets/-/raw/master/png/aqua-divider.png" /></a>
 
-## This Repository (Shared Common)
+## Packages
 
-This repository houses files that propagate downstream to project-specific repositories.
+The following projects have scoops that are installable after adding this Scoop bucket to your registry:
+
+scoop_var_chart
 
 <a href="#contributing" style="width:100%"><img style="width:100%" src="https://gitlab.com/megabyte-labs/assets/-/raw/master/png/aqua-divider.png" /></a>
 
 ## Contributing
 
-Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/installdoc/homebrew-tap/issues). If you would like to contribute, please take a look at the [contributing guide](https://github.com/installdoc/homebrew-tap/blob/master/docs/CONTRIBUTING.md).
+Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/installdoc/scoops/issues). If you would like to contribute, please take a look at the [contributing guide](https://github.com/installdoc/scoops/blob/master/docs/CONTRIBUTING.md).
 
 <details>
 <summary><b>Sponsorship</b></summary>
@@ -123,4 +125,4 @@ I create open source projects out of love. Although I have a job, shelter, and a
 
 ## License
 
-Copyright © 2020-2021 [Megabyte LLC](https://megabyte.space). This project is [MIT](https://gitlab.com/megabyte-labs/cloud/homebrew-tap/-/blob/master/LICENSE) licensed.
+Copyright © 2020-2021 [Megabyte LLC](https://megabyte.space). This project is [MIT](https://gitlab.com/megabyte-labs/cloud/scoops/-/blob/master/LICENSE) licensed.
