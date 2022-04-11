@@ -103,7 +103,10 @@
     },
     "slug": "scoops",
     "subgroup": "scoop",
-    "title": "The Official Scoop Bucket for Install Doctor"
+    "title": "The Official Scoop Bucket for Install Doctor",
+    "github_id": "R_kgDOHKRVWw",
+    "gitlab_project_id": "35274988",
+    "gitlab_group_id": "6973111"
   },
   "changelog": {
     "displayTypes": [
