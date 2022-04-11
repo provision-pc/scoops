@@ -50,17 +50,17 @@
   },
   "optionalDependencies": {},
   "devDependencies": {
+    "@commitlint/config-conventional": "latest",
     "@types/node": "^16.11.6",
     "esbuild": "^0.12.29",
     "esbuild-node-externals": "^1.3.0",
     "eslint-config-strict-mode": "latest",
     "git-cz-emoji": "latest",
+    "handlebars-helpers": "latest",
     "jest-preset-ts": "latest",
     "prettier-config-sexy-mode": "latest",
     "semantic-release-config": "latest",
-    "typescript": "^4.5.5",
-    "@commitlint/config-conventional": "latest",
-    "handlebars-helpers": "latest"
+    "typescript": "^4.5.5"
   },
   "keywords": [
     "automation",
@@ -84,13 +84,16 @@
     "node": ">=14.18.0"
   },
   "publishConfig": {
-    "@gitlab:registry": "https://gitlab.com/api/v4/projects//packages/npm/",
+    "@gitlab:registry": "https://gitlab.com/api/v4/projects/35274988/packages/npm/",
     "access": "public",
     "registry": "https://registry.npmjs.org/",
     "tag": "edge"
   },
   "blueprint": {
     "description": "The official Scoop bucket for Install Doctor (https://install.doctor)",
+    "github_id": "R_kgDOHKRVWw",
+    "gitlab_group_id": "6973111",
+    "gitlab_project_id": "35274988",
     "group": "npm",
     "name": "Install Doctor Bucket",
     "overview": "**[Install Doctor](https://install.doctor)** is a web service that makes it easy to install your favorite software. It is a service maintained by [Megabyte Labs](https://megabyte.space) and is used as a front-end for anything that involves installing and provisioning systems. This repository is just one small part of Install Doctor. It is the [Scoop](https://scoop.sh/) bucket for users who wish to use Scoop to install the software we support. Scoop is a package manager for Windows.",
@@ -103,10 +106,7 @@
     },
     "slug": "scoops",
     "subgroup": "scoop",
-    "title": "The Official Scoop Bucket for Install Doctor",
-    "github_id": "R_kgDOHKRVWw",
-    "gitlab_project_id": "35274988",
-    "gitlab_group_id": "6973111"
+    "title": "The Official Scoop Bucket for Install Doctor"
   },
   "changelog": {
     "displayTypes": [
@@ -119,7 +119,9 @@
     "showAuthor": true
   },
   "commitlint": {
-    "extends": [],
+    "extends": [
+      "@commitlint/config-conventional"
+    ],
     "helpUrl": "https://megabyte.space/docs/contributing/commits"
   },
   "eslintConfig": {

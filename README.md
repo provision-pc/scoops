@@ -88,7 +88,12 @@ scoop install installdoc/bodega
 
 The following projects have scoops that are installable after adding this Scoop bucket to your registry:
 
-scoop_var_chart
+[
+[
+"Project",
+"Description"
+]
+]
 
 <a href="#contributing" style="width:100%"><img style="width:100%" src="https://gitlab.com/megabyte-labs/assets/-/raw/master/png/aqua-divider.png" /></a>
 
