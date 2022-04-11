@@ -1,7 +1,7 @@
 <!-- ⚠️ This README has been generated from the file(s) ".config/docs/blueprint-readme-tap.md" ⚠️--><div align="center">
   <center>
     <a href="https://github.com/installdoc/homebrew-tap">
-      <img width="148" height="148" alt="Install Doctor logo" src="https://gitlab.com/megabyte-labs/cloud/homebrew-tap/-/raw/master/logo.png" />
+      <img width="148" height="148" alt="Install Doctor Tap logo" src="https://gitlab.com/megabyte-labs/cloud/homebrew-tap/-/raw/master/logo.png" />
     </a>
   </center>
 </div>
@@ -20,6 +20,9 @@
   <a href="https://app.slack.com/client/T01ABCG4NK1/C01NN74H0LW/details/" title="Chat with us on Slack" target="_blank">
     <img alt="Slack" src="https://img.shields.io/badge/Slack-Chat-e01e5a?logo=slack&logoColor=white&style=for-the-badge" />
   </a>
+  <a href="https://gitter.im/megabyte-labs/community" title="Chat with the community on Gitter" target="_blank">
+    <img alt="Gitter" src="https://img.shields.io/gitter/room/megabyte-labs/community?logo=gitter&logoColor=white&style=for-the-badge" />
+  </a>
   <a href="https://github.com/installdoc/homebrew-tap" title="GitHub mirror" target="_blank">
     <img alt="GitHub" src="https://img.shields.io/badge/Mirror-GitHub-333333?logo=github&style=for-the-badge" />
   </a>
@@ -30,7 +33,7 @@
 <br/>
 <div align="center">
   <a href="https://gitlab.com/megabyte-labs/cloud/homebrew-tap/-/commits/master" title="GitLab CI build status" target="_blank">
-    <img alt="Build status" src="https://img.shields.io/gitlab/pipeline-status/megabyte-labs/npm/tap/homebrew-tap?branch=master&label=build&logo=gitlab&logoColor=white&style=flat-square">
+    <img alt="Build status" src="https://img.shields.io/gitlab/pipeline-status/megabyte-labs/cloud/homebrew-tap?branch=master&label=build&logo=gitlab&logoColor=white&style=flat-square">
   </a>
   <a href="https://install.doctor" target="_blank">
     <img alt="Documentation / Instructions" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg?logo=readthedocs&logoColor=white&style=flat-square" />
@@ -48,6 +51,7 @@
 
 - [Overview](#overview)
 - [Requirements](#requirements)
+- [Example Install](#example-install)
 - [This Repository (Shared Common)](#this-repository-shared-common)
 - [Contributing](#contributing)
 - [License](#license)
@@ -56,7 +60,7 @@
 
 ## Overview
 
-**[Install Doctor](https://install.doctor)** is a web service that makes it easy to install your favorite software. It is a service maintained by [Megabyte Labs](https://megabyte.space) and is used as a front-end for anything that involves installing and provisioning systems. This repository is just one small part of Install Doctor.
+**[Install Doctor](https://install.doctor)** is a web service that makes it easy to install your favorite software. It is a service maintained by [Megabyte Labs](https://megabyte.space) and is used as a front-end for anything that involves installing and provisioning systems. This repository is just one small part of Install Doctor. It is the Homebrew tap for users who wish to use Homebrew to install the software we support.
 
 <a href="#requirements" style="width:100%"><img style="width:100%" src="https://gitlab.com/megabyte-labs/assets/-/raw/master/png/aqua-divider.png" /></a>
 
@@ -67,6 +71,10 @@ In order to leverage the software that this Homebrew tap provides, you first nee
 ```shell
 brew tap installdoc/tap
 ```
+
+<a href="#example-install" style="width:100%"><img style="width:100%" src="https://gitlab.com/megabyte-labs/assets/-/raw/master/png/aqua-divider.png" /></a>
+
+## Example Install
 
 After the tap is installed, you can install software by specifying its short name. For instance, if you wanted to install [Bodega](https://github.com/megabyte-labs/Bodega) then you would run:
 

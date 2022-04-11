@@ -1,6 +1,6 @@
 {
   "private": false,
-  "name": "@installdoc/homebrew-tap",
+  "name": "@mblabs/homebrew-tap",
   "version": "1.0.0",
   "description": "The official Homebrew tap for Install Doctor (https://install.doctor)",
   "license": "MIT",
