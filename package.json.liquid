@@ -1,118 +1,14 @@
 {
-  "private": false,
-  "name": "@installdoc/scoops",
-  "version": "1.0.0",
-  "description": "The official Scoop bucket for Install Doctor (https://install.doctor)",
-  "license": "MIT",
-  "author": "Brian Zalewski <brian@megabyte.space> (https://megabyte.space)",
-  "homepage": "https://megabyte.space",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/installdoc/scoops.git"
+  "author": "{{author.name}} <{{author.email}}> ({{link.home}})",
+  "blueprint": {
+    "repository": {
+      "github": "{{#if repository.github}}{{repository.github}}{{else}}https://github.com/{{profile.github}}/{{repository.prefix.github}}{{slug}}{{/if}}",
+      "gitlab": "{{#if repository.gitlab}}{{repository.gitlab}}{{else}}{{repository.gitlabBaseUrl}}/{{group}}/{{subgroup}}/{{slug}}{{/if}}"
+    }
   },
   "bugs": {
-    "email": "help@megabyte.space",
-    "url": "https://gitlab.com/megabyte-labs/cloud/scoops/-/issues"
-  },
-  "type": "commonjs",
-  "main": "dist/main.js",
-  "files": [
-    "dist",
-    "lib"
-  ],
-  "scripts": {
-    "build": "bash start.sh && task npm:build:tsconfig",
-    "bump": "npm run build && npm version patch --no-scripts --no-commit-hooks --no-git-tag-version --force && SKIP_PREPUB=true npm publish",
-    "commit": "bash start.sh && task commit",
-    "fix": "bash start.sh && task fix",
-    "help": "bash start.sh && task --menu",
-    "postinstall": "go-npm install || true",
-    "lint": "bash start.sh && task lint",
-    "preload": "bash start.sh && task preload",
-    "prepare": "bash start.sh && (test -f Taskfile.yml && task npm:prepare) || true",
-    "release": "bash start.sh && task publish:semantic-release",
-    "repair": "bash <(curl -sS https://install.doctor/repair)",
-    "start": "test -z $SKIP_NPM_START && bash start.sh || true",
-    "test": "bash start.sh && task donothing",
-    "preuninstall": "go-npm uninstall || true",
-    "unpack": "bash start.sh && task npm:bundle:unpack",
-    "update": "bash start.sh && task update",
-    "vscode": "bash start.sh && task vscode"
-  },
-  "config": {
-    "commitizen": {
-      "path": "node_modules/git-cz-emoji"
-    }
-  },
-  "typings": "dist/main.d.ts",
-  "dependencies": {
-    "tslib": "latest"
-  },
-  "peerDependenciesMeta": {
-    "eslint": {
-      "optional": true
-    }
-  },
-  "optionalDependencies": {},
-  "devDependencies": {
-    "@commitlint/config-conventional": "latest",
-    "@types/node": "^16.11.6",
-    "esbuild": "^0.12.29",
-    "esbuild-node-externals": "^1.3.0",
-    "eslint-config-strict-mode": "latest",
-    "git-cz-emoji": "latest",
-    "handlebars-helpers": "latest",
-    "jest-preset-ts": "latest",
-    "prettier": "^2.4.1",
-    "prettier-config-sexy-mode": "latest",
-    "semantic-release-config": "latest",
-    "typescript": "^4.5.5"
-  },
-  "keywords": [
-    "automation",
-    "cli",
-    "doctor",
-    "go",
-    "go-lang",
-    "golang",
-    "homebrew",
-    "install",
-    "installdoctor",
-    "mblabs",
-    "megabytelabs",
-    "professormanhattan",
-    "scoop",
-    "tap",
-    "washingtondc",
-    "windows"
-  ],
-  "engines": {
-    "node": ">=14.18.0"
-  },
-  "publishConfig": {
-    "@gitlab:registry": "https://gitlab.com/api/v4/projects/35274988/packages/npm/",
-    "access": "public",
-    "registry": "https://registry.npmjs.org/",
-    "tag": "edge"
-  },
-  "blueprint": {
-    "description": "The official Scoop bucket for Install Doctor (https://install.doctor)",
-    "github_id": "R_kgDOHKRVWw",
-    "gitlab_group_id": "6973111",
-    "gitlab_project_id": "35274988",
-    "group": "npm",
-    "name": "Install Doctor Bucket",
-    "overview": "**[Install Doctor](https://install.doctor)** is a web service that makes it easy to install your favorite software. It is a service maintained by [Megabyte Labs](https://megabyte.space) and is used as a front-end for anything that involves installing and provisioning systems. This repository is just one small part of Install Doctor. It is the [Scoop](https://scoop.sh/) bucket for users who wish to use Scoop to install the software we support. Scoop is a package manager for Windows.",
-    "profile": {
-      "npmjs_organization": "installdoc"
-    },
-    "repository": {
-      "github": "https://github.com/installdoc/scoops",
-      "gitlab": "https://gitlab.com/megabyte-labs/cloud/scoops"
-    },
-    "slug": "scoops",
-    "subgroup": "scoop",
-    "title": "The Official Scoop Bucket for Install Doctor"
+    "email": "{{email.help}}",
+    "url": "{{#if repository.gitlab}}{{repository.gitlab}}{{else}}{{repository.gitlabBaseUrl}}/{{group}}/{{subgroup}}/{{slug}}{{/if}}{{repository.location.issues.gitlab}}"
   },
   "changelog": {
     "displayTypes": [
@@ -130,27 +26,48 @@
     ],
     "helpUrl": "https://megabyte.space/docs/contributing/commits"
   },
-  "eslintConfig": {
-    "extends": "eslint-config-strict-mode",
-    "ignorePatterns": [
-      "testdata/**/*"
-    ]
+  "config": {
+    "commitizen": {
+      "path": "node_modules/git-cz-emoji"
+    }
   },
+  "dependencies": {},
+  "description": "{{description}}",
+  "devDependencies": {
+    "@commitlint/config-conventional": "latest",
+    "@types/node": "^16.11.6",
+    "esbuild": "^0.12.29",
+    "esbuild-node-externals": "^1.3.0",
+    "eslint-config-strict-mode": "latest",
+    "git-cz-emoji": "latest",
+    "handlebars-helpers": "latest",
+    "jest-preset-ts": "latest",
+    "prettier": "^2.4.1",
+    "prettier-config-sexy-mode": "latest",
+    "semantic-release-config": "latest",
+    "typescript": "^4.5.5"
+  },
+  "engines": {
+    "node": ">=14.18.0"
+  },
+  "eslintConfig": {
+    "extends": "eslint-config-strict-mode"
+  },
+  "files": [
+    "dist",
+    "lib"
+  ],
   "funding": [
     {
       "type": "opencollective",
-      "url": "https://opencollective.com/megabytelabs"
+      "url": "{{profile_link.opencollective}}/{{profile.opencollective}}"
     },
     {
       "type": "patreon",
-      "url": "https://www.patreon.com/ProfessorManhattan"
+      "url": "{{profile_link.patreon}}/{{profile.patreon}}"
     }
   ],
-  "goBinary": {
-    "name": "task",
-    "path": "./bin",
-    "url": "https://github.com/megabyte-labs/Bodega/releases/download/v10.0.0/Bodega-10.0.0-{{platform}}-{{arch}}.tar.gz"
-  },
+  "homepage": "{{link.home}}",
   "jest": {
     "preset": "jest-preset-ts",
     "reporters": [
@@ -171,6 +88,18 @@
     "gitignore": true,
     "threshold": 0.1
   },
+  "keywords": [
+    "doctor",
+    "install",
+    "installdoctor",
+    "mblabs",
+    "megabytelabs",
+    "professormanhattan",
+    "scoop",
+    "washingtondc",
+    "windows"
+  ],
+  "license": "{{license}}",
   "lint-staged": {
     "(Brewfile|composer.lock|Gemfile|Gopkg.lock|Pipfile.lock)": [
       "task fix:prettier --"
@@ -241,6 +170,8 @@
       "task image:compress --"
     ]
   },
+  "main": "dist/main.js",
+  "name": "{{#if customPackageName}}{{customPackageName}}{{else}}@{{profile.npmjs_organization}}/{{repository.prefix.github}}{{slug}}{{/if}}",
   "nodemonConfig": {
     "exec": "tsc -p . && node --inspect-brk dist/main",
     "ext": "js,jsx,json,ts,tsx,yml",
@@ -270,10 +201,15 @@
       "update": "Update and refresh the repository with upstream changes and templated parts"
     }
   },
+  "optionalDependencies": {},
+  "peerDependenciesMeta": {
+    "eslint": {
+      "optional": true
+    }
+  },
   "pnpm": {
     "allowedVersions": {
       "@typescript-eslint/eslint-plugin": "5",
-      "eslint": "8",
       "typescript": "4"
     },
     "neverBuiltDependencies": [
@@ -290,6 +226,13 @@
     }
   },
   "prettier": "prettier-config-sexy-mode",
+  "private": false,
+  "publishConfig": {
+    "@gitlab:registry": "https://gitlab.com/api/v4/projects/{{gitlab_project_id}}/packages/npm/",
+    "access": "{{npm_publish_config_access}}",
+    "registry": "https://registry.npmjs.org/",
+    "tag": "edge"
+  },
   "release": {
     "branches": [
       "main",
@@ -302,6 +245,30 @@
     ],
     "extends": "semantic-release-config"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+{{#if repository.github}}{{repository.github}}{{else}}https://github.com/{{profile.github}}/{{repository.prefix.github}}{{slug}}{{/if}}.git"
+  },
+  "scripts": {
+    "build": "bash start.sh && {{{replace scriptsBuild scriptsReplaceThis scriptsReplaceWith}}}",
+    "bump": "npm run build && npm version patch --no-scripts --no-commit-hooks --no-git-tag-version --force && SKIP_PREPUB=true npm publish",
+    "commit": "bash start.sh && task commit",
+    "fix": "bash start.sh && task fix",
+    "help": "bash start.sh && task --menu",
+    "lint": "bash start.sh && task lint",
+    "preload": "bash start.sh && task preload",
+    "prepare": "bash start.sh && (test -f Taskfile.yml && task npm:prepare) || true",
+    "release": "bash start.sh && task publish:semantic-release",
+    "repair": "bash <(curl -sS https://install.doctor/repair)",
+    "start": "test -z $SKIP_NPM_START && bash start.sh || true",
+    "test": "bash start.sh && {{{replace scriptsTest scriptsReplaceThis scriptsReplaceWith}}}",
+    "unpack": "bash start.sh && task npm:bundle:unpack",
+    "update": "bash start.sh && task update",
+    "vscode": "bash start.sh && task vscode"
+  },
+  "type": "{{npm_type}}",
+  "typings": "dist/main.d.ts",
+  "version": "{{version}}",
   "volta": {
     "node": "18.4.0",
     "yarn": "1.22.19"
