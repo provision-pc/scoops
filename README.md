@@ -33,7 +33,7 @@
 <br/>
 <div align="center">
   <a href="https://gitlab.com/megabyte-labs/cloud/scoops/-/commits/master" title="GitLab CI build status" target="_blank">
-    <img alt="Build status" src="https://img.shields.io/gitlab/pipeline-status/megabyte-labs/cloud/scoops?branch=master&label=build&logo=gitlab&logoColor=white&style=flat-square">
+    <img alt="Build status" src="https://img.shields.io/gitlab/pipeline-status/megabyte-labs/cloud/scoops?branch=master&label=build&logo=gitlab&logoColor=white&style=flat-square" />
   </a>
   <a href="https://install.doctor" target="_blank">
     <img alt="Documentation / Instructions" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg?logo=readthedocs&logoColor=white&style=flat-square" />
